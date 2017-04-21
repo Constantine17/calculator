@@ -1,0 +1,9 @@
+D:\programs\GIT_C#\Сalculator\Сalculator\bin\Debug\Сalculator.exe.config
+D:\programs\GIT_C#\Сalculator\Сalculator\bin\Debug\Сalculator.exe
+D:\programs\GIT_C#\Сalculator\Сalculator\bin\Debug\Сalculator.pdb
+D:\programs\GIT_C#\Сalculator\Сalculator\obj\Debug\Сalculator.csprojResolveAssemblyReference.cache
+D:\programs\GIT_C#\Сalculator\Сalculator\obj\Debug\Сalculator.Form1.resources
+D:\programs\GIT_C#\Сalculator\Сalculator\obj\Debug\Сalculator.Properties.Resources.resources
+D:\programs\GIT_C#\Сalculator\Сalculator\obj\Debug\Сalculator.csproj.GenerateResource.Cache
+D:\programs\GIT_C#\Сalculator\Сalculator\obj\Debug\Сalculator.exe
+D:\programs\GIT_C#\Сalculator\Сalculator\obj\Debug\Сalculator.pdb
