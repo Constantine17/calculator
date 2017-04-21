@@ -21,6 +21,7 @@ namespace Сalculator
         public Form1()
         {
             InitializeComponent();
+            
         }
 
 
@@ -37,7 +38,7 @@ namespace Сalculator
             BoxText.Text = Input;
         }
 
-        private void thee_Click(object sender, EventArgs e)
+        private void three_Click(object sender, EventArgs e)
         {
             Input += "3";
             BoxText.Text = Input;
@@ -97,6 +98,7 @@ namespace Сalculator
 
         private void enter_Click(object sender, EventArgs e)//ENTER
         {
+            
             bool error=false;//div on zero
             double equally = 0;
             Rarg = Input;
@@ -172,5 +174,73 @@ namespace Сalculator
             R_arg.Text = Rarg;
             _Input.Text = Input;
         }
+
+        private void backspace_Click(object sender, EventArgs e)
+        {
+            if (Input != "")
+            {
+                Input = Input.Substring(0, Input.Length - 1);
+                BoxText.Text = Input;
+            }
+        }
+
+        private void sin_Click(object sender, EventArgs e)// in radians!!!
+        {
+            if (Input != "")
+            {
+                Larg = Input;
+                Rarg = "";
+                Input = "";
+                command = "sin";
+                Larg = Convert.ToString(Math.Sin(Convert.ToDouble(Larg)));
+                BoxText.Text = Larg;
+            }
+        }
+
+        private void cos_Click(object sender, EventArgs e)// in radians!!!
+        {
+            Larg = Input;
+            Rarg = "";
+            Input = "";
+            command = "sin";
+            Larg = Convert.ToString(Math.Cos(Convert.ToDouble(Larg)));
+            BoxText.Text = Larg;
+        }
+
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)// keyboar reader
+        {
+            if (e.KeyCode == Keys.D0 || e.KeyCode == Keys.NumPad0)
+                this.zero_Click(new object(), new EventArgs());
+            if (e.KeyCode == Keys.D1|| e.KeyCode ==Keys.NumPad1)
+                this.one_Click(new object(), new EventArgs());
+            if (e.KeyCode == Keys.D2 || e.KeyCode == Keys.NumPad2)
+                this.two_Click(new object(), new EventArgs());
+            if (e.KeyCode == Keys.D3 || e.KeyCode == Keys.NumPad3)
+                this.three_Click(new object(), new EventArgs());
+            if (e.KeyCode == Keys.D4 || e.KeyCode == Keys.NumPad4)
+                this.four_Click(new object(), new EventArgs());
+            if (e.KeyCode == Keys.D5 || e.KeyCode == Keys.NumPad5)
+                this.five_Click(new object(), new EventArgs());
+            if (e.KeyCode == Keys.D6 || e.KeyCode == Keys.NumPad6)
+                this.six_Click(new object(), new EventArgs());
+            if (e.KeyCode == Keys.D7 || e.KeyCode == Keys.NumPad7)
+                this.seven_Click(new object(), new EventArgs());
+            if (e.KeyCode == Keys.D8 || e.KeyCode == Keys.NumPad8)
+                this.eight_Click(new object(), new EventArgs());
+            if (e.KeyCode == Keys.D9 || e.KeyCode == Keys.NumPad9)
+                this.nine_Click(new object(), new EventArgs());
+
+            if (e.KeyCode == Keys.Enter)
+                this.nine_Click(new object(), new EventArgs());
+        }
+
+
+
+
+
+
+
+
     }
 }
