@@ -19,6 +19,7 @@ namespace Сalculator
         private static string Rarg = "";
         private static string command = "";
         private static string culc_str = "";
+        private static bool degrees = true; 
         public Form1()
         {
             InitializeComponent();
@@ -124,9 +125,40 @@ namespace Сalculator
                 //Arithmetic operations }
 
                 // Functions {
-                case "sqrt": { equally = Math.Sqrt(double_Rarg); fun = "sqrt( "; singl = true; break; }
-                case "sin": { equally = Math.Sin(double_Rarg); fun = "sin( "; singl = true; break; }
-                case "cos": { equally = Math.Cos(double_Rarg); fun = "cos( "; singl = true; break; }
+                case "sqrt": {
+                       equally = Math.Sqrt(double_Rarg);
+                       fun = "sqrt( "; singl = true; break;
+                    }
+                case "squared":
+                    {
+                        equally = double_Rarg * double_Rarg;
+                        fun = "squared( "; singl = true; break;
+                    }
+                case "ln":
+                    {
+                        equally = Math.Log(double_Rarg);
+                        fun = "ln( "; singl = true; break;
+                    }
+                case "lg":
+                    {
+                        equally  =Math.Log10(double_Rarg);
+                        fun = "lg( "; singl = true; break;
+                    }
+                case "sin": {
+                        if (!degrees) equally = Math.Sin(double_Rarg);
+                        else equally = Math.Sin(Math.PI * double_Rarg / 180);
+                        fun = "sin( "; singl = true; break;
+                    }
+                case "cos": {
+                        if (!degrees) equally = Math.Cos(double_Rarg);
+                        else equally = Math.Cos(Math.PI * double_Rarg / 180);
+                        fun = "cos( "; singl = true; break;
+                    }
+                case "tan": {
+                        if (!degrees) equally = Math.Tan(double_Rarg);
+                        else equally = Math.Tan(Math.PI * double_Rarg / 180);
+                        fun = "tan( "; singl = true; break;
+                    }
                 //case "sqrt": {; break; }
                 //case "sqrt": {; break; }
                 //case "sqrt": {; break; }
@@ -134,9 +166,10 @@ namespace Сalculator
 
                 default: equally = Convert.ToDouble(BoxText.Text); break;// no command
             }
-            command = "";
+            
+            equally = Math.Round(equally, 15);
             //Larg = Convert.ToString(equally);
-            Larg = Convert.ToString(equally);
+           // Larg = Convert.ToString(equally);
 
             if (error) BoxText.Text = "error!";
             else { if (Larg != "") BoxText.Text = Convert.ToString(equally); else BoxText.Text = BoxText.Text; }
@@ -145,10 +178,20 @@ namespace Сalculator
 
             if (singl) culc_str = fun + Rarg +" )=";
             else culc_str +=" "+ Rarg + " =";
-            
+
+
+            if (command == "power") {
+                equally = Math.Pow(double_Larg, double_Rarg);
+                culc_str = Larg + " ^ " + Rarg + "=";
+                BoxText.Text = Convert.ToString(equally);
+            }
+
+
+            Larg = Convert.ToString(equally);
             culc.Text = culc_str;
             culc_str = "";
             if (culc.Text == " 0 =") { BoxText.Text = "0"; }
+            command = "";
         }
         
         private void clean_Click(object sender, EventArgs e)
@@ -244,6 +287,16 @@ namespace Сalculator
 
             culc.Text = "cos( " + Rarg + " )";
         }
+
+        private void tan_Click(object sender, EventArgs e)
+        {
+            Rarg = Input;
+
+            command = "tan";
+
+            culc.Text = "tan( " + Rarg + " )";
+        }
+
         private void sqrt_Click(object sender, EventArgs e)
         {
             Rarg = Input;
@@ -309,9 +362,59 @@ namespace Сalculator
 
         }
 
+        private void squared_Click(object sender, EventArgs e)
+        {
+            Rarg = Input;
+
+            command = "squared";
+
+            culc.Text = "squared( " + Rarg + " )";
+        }
+
+        private void power_Click(object sender, EventArgs e)
+        {
+            Larg = Input;
+
+            command = "power";
+
+            culc.Text = Larg + " ^ ";
+            BoxText.Text = "0";
+            Input = "";
+        }
+
+        private void degree_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (degree.Checked) {degree.Checked = true; radians.Checked = false; degrees = true; }
+            if (!degree.Checked) { degree.Checked = false; radians.Checked = true; degrees = false; }
+
+        }
+
+        private void radians_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radians.Checked) { degree.Checked = false; radians.Checked = true; degrees = false; }
+            if (!radians.Checked) { degree.Checked = true; radians.Checked = false; degrees = true; }
+        }
+
+        private void ln_Click(object sender, EventArgs e)
+        {
+            Rarg = Input;
+
+            command = "ln";
+
+            culc.Text = "ln( " + Rarg + " )";
+        }
+
+        private void Log_Click(object sender, EventArgs e)
+        {
+            Rarg = Input;
+
+            command = "lg";
+
+            culc.Text = "lg( " + Rarg + " )";
+        }
 
         /// Function
 
     }
 }
- 

@@ -55,6 +55,14 @@
             this.sqrt = new System.Windows.Forms.Button();
             this.backspace = new System.Windows.Forms.Button();
             this.culc = new System.Windows.Forms.TextBox();
+            this.squared = new System.Windows.Forms.Button();
+            this.power = new System.Windows.Forms.Button();
+            this.ln = new System.Windows.Forms.Button();
+            this.Log = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.tan = new System.Windows.Forms.Button();
+            this.degree = new System.Windows.Forms.CheckBox();
+            this.radians = new System.Windows.Forms.CheckBox();
             nine = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -250,21 +258,21 @@
             // 
             // L_arg
             // 
-            this.L_arg.Location = new System.Drawing.Point(89, 288);
+            this.L_arg.Location = new System.Drawing.Point(72, 369);
             this.L_arg.Name = "L_arg";
             this.L_arg.Size = new System.Drawing.Size(100, 20);
             this.L_arg.TabIndex = 18;
             // 
             // R_arg
             // 
-            this.R_arg.Location = new System.Drawing.Point(89, 314);
+            this.R_arg.Location = new System.Drawing.Point(72, 395);
             this.R_arg.Name = "R_arg";
             this.R_arg.Size = new System.Drawing.Size(100, 20);
             this.R_arg.TabIndex = 19;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(205, 298);
+            this.button1.Location = new System.Drawing.Point(188, 379);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 20;
@@ -285,7 +293,7 @@
             // 
             // _Input
             // 
-            this._Input.Location = new System.Drawing.Point(286, 300);
+            this._Input.Location = new System.Drawing.Point(269, 381);
             this._Input.Name = "_Input";
             this._Input.Size = new System.Drawing.Size(100, 20);
             this._Input.TabIndex = 22;
@@ -315,7 +323,7 @@
             // sqrt
             // 
             this.sqrt.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sqrt.Location = new System.Drawing.Point(37, 120);
+            this.sqrt.Location = new System.Drawing.Point(211, 267);
             this.sqrt.Name = "sqrt";
             this.sqrt.Size = new System.Drawing.Size(52, 43);
             this.sqrt.TabIndex = 24;
@@ -348,6 +356,95 @@
             this.culc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.culc.WordWrap = false;
             // 
+            // squared
+            // 
+            this.squared.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.squared.Location = new System.Drawing.Point(153, 267);
+            this.squared.Name = "squared";
+            this.squared.Size = new System.Drawing.Size(52, 43);
+            this.squared.TabIndex = 28;
+            this.squared.Text = "^2";
+            this.squared.UseVisualStyleBackColor = true;
+            this.squared.Click += new System.EventHandler(this.squared_Click);
+            // 
+            // power
+            // 
+            this.power.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.power.Location = new System.Drawing.Point(95, 267);
+            this.power.Name = "power";
+            this.power.Size = new System.Drawing.Size(52, 43);
+            this.power.TabIndex = 29;
+            this.power.Text = "^x";
+            this.power.UseVisualStyleBackColor = true;
+            this.power.Click += new System.EventHandler(this.power_Click);
+            // 
+            // ln
+            // 
+            this.ln.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ln.Location = new System.Drawing.Point(269, 267);
+            this.ln.Name = "ln";
+            this.ln.Size = new System.Drawing.Size(52, 43);
+            this.ln.TabIndex = 30;
+            this.ln.Text = "Ln";
+            this.ln.UseVisualStyleBackColor = true;
+            this.ln.Click += new System.EventHandler(this.ln_Click);
+            // 
+            // Log
+            // 
+            this.Log.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Log.Location = new System.Drawing.Point(327, 268);
+            this.Log.Name = "Log";
+            this.Log.Size = new System.Drawing.Size(52, 43);
+            this.Log.TabIndex = 31;
+            this.Log.Text = "Lg";
+            this.Log.UseVisualStyleBackColor = true;
+            this.Log.Click += new System.EventHandler(this.Log_Click);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Location = new System.Drawing.Point(37, 120);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(52, 43);
+            this.button2.TabIndex = 32;
+            this.button2.Text = "n!";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // tan
+            // 
+            this.tan.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tan.Location = new System.Drawing.Point(37, 267);
+            this.tan.Name = "tan";
+            this.tan.Size = new System.Drawing.Size(52, 43);
+            this.tan.TabIndex = 33;
+            this.tan.Text = "Tan";
+            this.tan.UseVisualStyleBackColor = true;
+            this.tan.Click += new System.EventHandler(this.tan_Click);
+            // 
+            // degree
+            // 
+            this.degree.AutoSize = true;
+            this.degree.Checked = true;
+            this.degree.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.degree.Location = new System.Drawing.Point(37, 316);
+            this.degree.Name = "degree";
+            this.degree.Size = new System.Drawing.Size(64, 17);
+            this.degree.TabIndex = 34;
+            this.degree.Text = "degrees";
+            this.degree.UseVisualStyleBackColor = true;
+            this.degree.CheckedChanged += new System.EventHandler(this.degree_CheckedChanged);
+            // 
+            // radians
+            // 
+            this.radians.AutoSize = true;
+            this.radians.Location = new System.Drawing.Point(107, 316);
+            this.radians.Name = "radians";
+            this.radians.Size = new System.Drawing.Size(60, 17);
+            this.radians.TabIndex = 35;
+            this.radians.Text = "radians";
+            this.radians.UseVisualStyleBackColor = true;
+            this.radians.CheckedChanged += new System.EventHandler(this.radians_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -355,7 +452,15 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.CancelButton = this.clean;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(390, 352);
+            this.ClientSize = new System.Drawing.Size(536, 444);
+            this.Controls.Add(this.radians);
+            this.Controls.Add(this.degree);
+            this.Controls.Add(this.tan);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Log);
+            this.Controls.Add(this.ln);
+            this.Controls.Add(this.power);
+            this.Controls.Add(this.squared);
             this.Controls.Add(this.culc);
             this.Controls.Add(this.cos);
             this.Controls.Add(this.sin);
@@ -421,6 +526,14 @@
         private System.Windows.Forms.Button sqrt;
         private System.Windows.Forms.Button backspace;
         private System.Windows.Forms.TextBox culc;
+        private System.Windows.Forms.Button squared;
+        private System.Windows.Forms.Button power;
+        private System.Windows.Forms.Button ln;
+        private System.Windows.Forms.Button Log;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button tan;
+        private System.Windows.Forms.CheckBox degree;
+        private System.Windows.Forms.CheckBox radians;
     }
 }
 
