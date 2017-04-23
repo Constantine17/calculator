@@ -45,11 +45,7 @@
             this.div = new System.Windows.Forms.Button();
             this.enter = new System.Windows.Forms.Button();
             this.clean = new System.Windows.Forms.Button();
-            this.L_arg = new System.Windows.Forms.TextBox();
-            this.R_arg = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.BoxText = new System.Windows.Forms.TextBox();
-            this._Input = new System.Windows.Forms.TextBox();
             this.cos = new System.Windows.Forms.Button();
             this.sin = new System.Windows.Forms.Button();
             this.sqrt = new System.Windows.Forms.Button();
@@ -59,10 +55,10 @@
             this.power = new System.Windows.Forms.Button();
             this.ln = new System.Windows.Forms.Button();
             this.Log = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.tan = new System.Windows.Forms.Button();
             this.degree = new System.Windows.Forms.CheckBox();
             this.radians = new System.Windows.Forms.CheckBox();
+            this.Fuct = new System.Windows.Forms.Button();
             nine = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -70,7 +66,7 @@
             // 
             nine.CausesValidation = false;
             nine.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nine.Location = new System.Drawing.Point(269, 71);
+            nine.Location = new System.Drawing.Point(244, 101);
             nine.Name = "nine";
             nine.Size = new System.Drawing.Size(52, 43);
             nine.TabIndex = 3;
@@ -82,7 +78,7 @@
             // seven
             // 
             this.seven.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.seven.Location = new System.Drawing.Point(153, 71);
+            this.seven.Location = new System.Drawing.Point(128, 101);
             this.seven.Name = "seven";
             this.seven.Size = new System.Drawing.Size(52, 43);
             this.seven.TabIndex = 1;
@@ -93,7 +89,7 @@
             // eight
             // 
             this.eight.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.eight.Location = new System.Drawing.Point(211, 71);
+            this.eight.Location = new System.Drawing.Point(186, 101);
             this.eight.Name = "eight";
             this.eight.Size = new System.Drawing.Size(52, 43);
             this.eight.TabIndex = 2;
@@ -104,7 +100,7 @@
             // four
             // 
             this.four.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.four.Location = new System.Drawing.Point(153, 120);
+            this.four.Location = new System.Drawing.Point(128, 150);
             this.four.Name = "four";
             this.four.Size = new System.Drawing.Size(52, 43);
             this.four.TabIndex = 4;
@@ -115,7 +111,7 @@
             // five
             // 
             this.five.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.five.Location = new System.Drawing.Point(211, 120);
+            this.five.Location = new System.Drawing.Point(186, 150);
             this.five.Name = "five";
             this.five.Size = new System.Drawing.Size(52, 43);
             this.five.TabIndex = 5;
@@ -126,7 +122,7 @@
             // six
             // 
             this.six.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.six.Location = new System.Drawing.Point(269, 120);
+            this.six.Location = new System.Drawing.Point(244, 150);
             this.six.Name = "six";
             this.six.Size = new System.Drawing.Size(52, 43);
             this.six.TabIndex = 6;
@@ -137,7 +133,7 @@
             // one
             // 
             this.one.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.one.Location = new System.Drawing.Point(153, 169);
+            this.one.Location = new System.Drawing.Point(128, 199);
             this.one.Name = "one";
             this.one.Size = new System.Drawing.Size(52, 43);
             this.one.TabIndex = 7;
@@ -148,7 +144,7 @@
             // two
             // 
             this.two.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.two.Location = new System.Drawing.Point(211, 169);
+            this.two.Location = new System.Drawing.Point(186, 199);
             this.two.Name = "two";
             this.two.Size = new System.Drawing.Size(52, 43);
             this.two.TabIndex = 8;
@@ -159,7 +155,7 @@
             // three
             // 
             this.three.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.three.Location = new System.Drawing.Point(269, 169);
+            this.three.Location = new System.Drawing.Point(244, 199);
             this.three.Name = "three";
             this.three.Size = new System.Drawing.Size(52, 43);
             this.three.TabIndex = 9;
@@ -170,7 +166,7 @@
             // point
             // 
             this.point.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.point.Location = new System.Drawing.Point(269, 218);
+            this.point.Location = new System.Drawing.Point(244, 248);
             this.point.Name = "point";
             this.point.Size = new System.Drawing.Size(52, 43);
             this.point.TabIndex = 10;
@@ -181,7 +177,7 @@
             // zero
             // 
             this.zero.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.zero.Location = new System.Drawing.Point(153, 218);
+            this.zero.Location = new System.Drawing.Point(128, 248);
             this.zero.Name = "zero";
             this.zero.Size = new System.Drawing.Size(110, 43);
             this.zero.TabIndex = 11;
@@ -192,7 +188,7 @@
             // mul
             // 
             this.mul.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mul.Location = new System.Drawing.Point(95, 169);
+            this.mul.Location = new System.Drawing.Point(70, 199);
             this.mul.Name = "mul";
             this.mul.Size = new System.Drawing.Size(52, 43);
             this.mul.TabIndex = 14;
@@ -203,7 +199,7 @@
             // sub
             // 
             this.sub.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sub.Location = new System.Drawing.Point(95, 120);
+            this.sub.Location = new System.Drawing.Point(70, 150);
             this.sub.Name = "sub";
             this.sub.Size = new System.Drawing.Size(52, 43);
             this.sub.TabIndex = 13;
@@ -214,7 +210,7 @@
             // add
             // 
             this.add.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.add.Location = new System.Drawing.Point(95, 71);
+            this.add.Location = new System.Drawing.Point(70, 101);
             this.add.Name = "add";
             this.add.Size = new System.Drawing.Size(52, 43);
             this.add.TabIndex = 12;
@@ -225,7 +221,7 @@
             // div
             // 
             this.div.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.div.Location = new System.Drawing.Point(95, 218);
+            this.div.Location = new System.Drawing.Point(70, 248);
             this.div.Name = "div";
             this.div.Size = new System.Drawing.Size(52, 43);
             this.div.TabIndex = 15;
@@ -236,7 +232,7 @@
             // enter
             // 
             this.enter.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enter.Location = new System.Drawing.Point(327, 169);
+            this.enter.Location = new System.Drawing.Point(302, 199);
             this.enter.Name = "enter";
             this.enter.Size = new System.Drawing.Size(52, 92);
             this.enter.TabIndex = 1;
@@ -248,7 +244,7 @@
             // 
             this.clean.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.clean.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clean.Location = new System.Drawing.Point(327, 71);
+            this.clean.Location = new System.Drawing.Point(302, 101);
             this.clean.Name = "clean";
             this.clean.Size = new System.Drawing.Size(52, 92);
             this.clean.TabIndex = 17;
@@ -256,52 +252,24 @@
             this.clean.UseVisualStyleBackColor = true;
             this.clean.Click += new System.EventHandler(this.clean_Click);
             // 
-            // L_arg
-            // 
-            this.L_arg.Location = new System.Drawing.Point(72, 369);
-            this.L_arg.Name = "L_arg";
-            this.L_arg.Size = new System.Drawing.Size(100, 20);
-            this.L_arg.TabIndex = 18;
-            // 
-            // R_arg
-            // 
-            this.R_arg.Location = new System.Drawing.Point(72, 395);
-            this.R_arg.Name = "R_arg";
-            this.R_arg.Size = new System.Drawing.Size(100, 20);
-            this.R_arg.TabIndex = 19;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(188, 379);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // BoxText
             // 
+            this.BoxText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BoxText.HideSelection = false;
-            this.BoxText.Location = new System.Drawing.Point(19, 41);
+            this.BoxText.Location = new System.Drawing.Point(12, 41);
             this.BoxText.Name = "BoxText";
-            this.BoxText.Size = new System.Drawing.Size(359, 20);
+            this.BoxText.ReadOnly = true;
+            this.BoxText.ShortcutsEnabled = false;
+            this.BoxText.Size = new System.Drawing.Size(342, 31);
             this.BoxText.TabIndex = 21;
             this.BoxText.Text = "0";
             this.BoxText.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.BoxText.WordWrap = false;
             // 
-            // _Input
-            // 
-            this._Input.Location = new System.Drawing.Point(269, 381);
-            this._Input.Name = "_Input";
-            this._Input.Size = new System.Drawing.Size(100, 20);
-            this._Input.TabIndex = 22;
-            // 
             // cos
             // 
             this.cos.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cos.Location = new System.Drawing.Point(37, 218);
+            this.cos.Location = new System.Drawing.Point(12, 248);
             this.cos.Name = "cos";
             this.cos.Size = new System.Drawing.Size(52, 43);
             this.cos.TabIndex = 26;
@@ -312,7 +280,7 @@
             // sin
             // 
             this.sin.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sin.Location = new System.Drawing.Point(37, 169);
+            this.sin.Location = new System.Drawing.Point(12, 199);
             this.sin.Name = "sin";
             this.sin.Size = new System.Drawing.Size(52, 43);
             this.sin.TabIndex = 25;
@@ -323,7 +291,7 @@
             // sqrt
             // 
             this.sqrt.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sqrt.Location = new System.Drawing.Point(211, 267);
+            this.sqrt.Location = new System.Drawing.Point(186, 297);
             this.sqrt.Name = "sqrt";
             this.sqrt.Size = new System.Drawing.Size(52, 43);
             this.sqrt.TabIndex = 24;
@@ -334,7 +302,7 @@
             // backspace
             // 
             this.backspace.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backspace.Location = new System.Drawing.Point(37, 71);
+            this.backspace.Location = new System.Drawing.Point(12, 101);
             this.backspace.Name = "backspace";
             this.backspace.Size = new System.Drawing.Size(52, 43);
             this.backspace.TabIndex = 23;
@@ -344,13 +312,15 @@
             // 
             // culc
             // 
+            this.culc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.culc.CausesValidation = false;
             this.culc.Enabled = false;
+            this.culc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.culc.HideSelection = false;
-            this.culc.Location = new System.Drawing.Point(19, 12);
+            this.culc.Location = new System.Drawing.Point(12, 12);
             this.culc.Name = "culc";
             this.culc.ShortcutsEnabled = false;
-            this.culc.Size = new System.Drawing.Size(359, 20);
+            this.culc.Size = new System.Drawing.Size(342, 22);
             this.culc.TabIndex = 27;
             this.culc.TabStop = false;
             this.culc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -359,7 +329,7 @@
             // squared
             // 
             this.squared.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.squared.Location = new System.Drawing.Point(153, 267);
+            this.squared.Location = new System.Drawing.Point(128, 297);
             this.squared.Name = "squared";
             this.squared.Size = new System.Drawing.Size(52, 43);
             this.squared.TabIndex = 28;
@@ -370,7 +340,7 @@
             // power
             // 
             this.power.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.power.Location = new System.Drawing.Point(95, 267);
+            this.power.Location = new System.Drawing.Point(70, 297);
             this.power.Name = "power";
             this.power.Size = new System.Drawing.Size(52, 43);
             this.power.TabIndex = 29;
@@ -381,7 +351,7 @@
             // ln
             // 
             this.ln.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ln.Location = new System.Drawing.Point(269, 267);
+            this.ln.Location = new System.Drawing.Point(244, 297);
             this.ln.Name = "ln";
             this.ln.Size = new System.Drawing.Size(52, 43);
             this.ln.TabIndex = 30;
@@ -392,7 +362,7 @@
             // Log
             // 
             this.Log.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Log.Location = new System.Drawing.Point(327, 268);
+            this.Log.Location = new System.Drawing.Point(302, 298);
             this.Log.Name = "Log";
             this.Log.Size = new System.Drawing.Size(52, 43);
             this.Log.TabIndex = 31;
@@ -400,20 +370,10 @@
             this.Log.UseVisualStyleBackColor = true;
             this.Log.Click += new System.EventHandler(this.Log_Click);
             // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(37, 120);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(52, 43);
-            this.button2.TabIndex = 32;
-            this.button2.Text = "n!";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // tan
             // 
             this.tan.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tan.Location = new System.Drawing.Point(37, 267);
+            this.tan.Location = new System.Drawing.Point(12, 297);
             this.tan.Name = "tan";
             this.tan.Size = new System.Drawing.Size(52, 43);
             this.tan.TabIndex = 33;
@@ -426,7 +386,7 @@
             this.degree.AutoSize = true;
             this.degree.Checked = true;
             this.degree.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.degree.Location = new System.Drawing.Point(37, 316);
+            this.degree.Location = new System.Drawing.Point(224, 78);
             this.degree.Name = "degree";
             this.degree.Size = new System.Drawing.Size(64, 17);
             this.degree.TabIndex = 34;
@@ -437,13 +397,24 @@
             // radians
             // 
             this.radians.AutoSize = true;
-            this.radians.Location = new System.Drawing.Point(107, 316);
+            this.radians.Location = new System.Drawing.Point(294, 78);
             this.radians.Name = "radians";
             this.radians.Size = new System.Drawing.Size(60, 17);
             this.radians.TabIndex = 35;
             this.radians.Text = "radians";
             this.radians.UseVisualStyleBackColor = true;
             this.radians.CheckedChanged += new System.EventHandler(this.radians_CheckedChanged);
+            // 
+            // Fuct
+            // 
+            this.Fuct.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Fuct.Location = new System.Drawing.Point(12, 150);
+            this.Fuct.Name = "Fuct";
+            this.Fuct.Size = new System.Drawing.Size(52, 43);
+            this.Fuct.TabIndex = 36;
+            this.Fuct.Text = "n!";
+            this.Fuct.UseVisualStyleBackColor = true;
+            this.Fuct.Click += new System.EventHandler(this.Fuct_Click);
             // 
             // Form1
             // 
@@ -452,11 +423,11 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.CancelButton = this.clean;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(536, 444);
+            this.ClientSize = new System.Drawing.Size(369, 358);
+            this.Controls.Add(this.Fuct);
             this.Controls.Add(this.radians);
             this.Controls.Add(this.degree);
             this.Controls.Add(this.tan);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.Log);
             this.Controls.Add(this.ln);
             this.Controls.Add(this.power);
@@ -466,11 +437,7 @@
             this.Controls.Add(this.sin);
             this.Controls.Add(this.sqrt);
             this.Controls.Add(this.backspace);
-            this.Controls.Add(this._Input);
             this.Controls.Add(this.BoxText);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.R_arg);
-            this.Controls.Add(this.L_arg);
             this.Controls.Add(this.clean);
             this.Controls.Add(this.enter);
             this.Controls.Add(this.div);
@@ -491,9 +458,8 @@
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Calculator";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -516,11 +482,7 @@
         private System.Windows.Forms.Button div;
         private System.Windows.Forms.Button enter;
         private System.Windows.Forms.Button clean;
-        private System.Windows.Forms.TextBox L_arg;
-        private System.Windows.Forms.TextBox R_arg;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox BoxText;
-        private System.Windows.Forms.TextBox _Input;
         private System.Windows.Forms.Button cos;
         private System.Windows.Forms.Button sin;
         private System.Windows.Forms.Button sqrt;
@@ -530,10 +492,10 @@
         private System.Windows.Forms.Button power;
         private System.Windows.Forms.Button ln;
         private System.Windows.Forms.Button Log;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button tan;
         private System.Windows.Forms.CheckBox degree;
         private System.Windows.Forms.CheckBox radians;
+        private System.Windows.Forms.Button Fuct;
     }
 }
 

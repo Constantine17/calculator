@@ -23,11 +23,11 @@ namespace Сalculator
         public Form1()
         {
             InitializeComponent();
-
+            BoxText.BackColor = Color.White;
             
         }
 
-
+        /////// num lock {
         private void one_Click(object sender, EventArgs e)
         {
             Input += "1";
@@ -97,7 +97,11 @@ namespace Сalculator
                 BoxText.Text = Input;
             }
         }
+        /////// num lock }
 
+
+
+        //// /// ENTER /// //// {
         private void enter_Click(object sender, EventArgs e)//ENTER
         {
 
@@ -124,7 +128,7 @@ namespace Сalculator
                 case "div": { if (double_Rarg != 0) { equally = double_Larg / double_Rarg; } else { error = true; } break; }
                 //Arithmetic operations }
 
-                // Functions {
+                // single functions {
                 case "sqrt": {
                        equally = Math.Sqrt(double_Rarg);
                        fun = "sqrt( "; singl = true; break;
@@ -159,33 +163,38 @@ namespace Сalculator
                         else equally = Math.Tan(Math.PI * double_Rarg / 180);
                         fun = "tan( "; singl = true; break;
                     }
-                //case "sqrt": {; break; }
-                //case "sqrt": {; break; }
-                //case "sqrt": {; break; }
-                // Functions }
+                case "fuct":
+                    {
+                        if (double_Rarg < 0) { error = true; break; }
+                        if (double_Rarg == 0) { equally = 0; break; }
+                        equally = 1;
+                        for (int i = 1; i <= double_Rarg; i++)
+                            equally *= i;
+                        fun = "fuct( "; singl = true;
+                        break;
+                    }
+                // single functions }
 
                 default: equally = Convert.ToDouble(BoxText.Text); break;// no command
             }
             
             equally = Math.Round(equally, 15);
-            //Larg = Convert.ToString(equally);
-           // Larg = Convert.ToString(equally);
 
-            if (error) BoxText.Text = "error!";
+            if (error) BoxText.Text = "error!"; // div on zero
             else { if (Larg != "") BoxText.Text = Convert.ToString(equally); else BoxText.Text = BoxText.Text; }
             
             Input = "";
 
-            if (singl) culc_str = fun + Rarg +" )=";
+            if (singl) culc_str = fun + Rarg +" )="; // input text function
             else culc_str +=" "+ Rarg + " =";
 
-
+            // double fumction {
             if (command == "power") {
                 equally = Math.Pow(double_Larg, double_Rarg);
                 culc_str = Larg + " ^ " + Rarg + "=";
                 BoxText.Text = Convert.ToString(equally);
             }
-
+            // double fumction }
 
             Larg = Convert.ToString(equally);
             culc.Text = culc_str;
@@ -193,7 +202,9 @@ namespace Сalculator
             if (culc.Text == " 0 =") { BoxText.Text = "0"; }
             command = "";
         }
-        
+        //// /// ENTER /// //// }
+
+        // clean {
         private void clean_Click(object sender, EventArgs e)
         {
             Larg = "";
@@ -205,7 +216,21 @@ namespace Сalculator
             culc.Text = culc_str;
            
         }
+        // clean }
 
+        // backspace {
+        private void backspace_Click(object sender, EventArgs e)
+        {
+            if (Input != "")
+            {
+                Input = Input.Substring(0, Input.Length - 1);
+                if (Input == "") Input = "0";
+                BoxText.Text = Input;
+            }
+        }
+        // backspace }
+
+        //// /// ARIRHMETIC OPERATIONS /// //// {
         private void add_Click(object sender, EventArgs e)//ADD
         {
             if(Input !="") Larg = Input;
@@ -252,31 +277,18 @@ namespace Сalculator
             culc_str += Larg + " /";
             culc.Text = culc_str;
         }
+        //// /// ARIRHMETIC OPERATIONS /// //// {
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            L_arg.Text = Larg;
-            R_arg.Text = Rarg;
-            _Input.Text = Input;
-        }
 
-        private void backspace_Click(object sender, EventArgs e)
-        {
-            if (Input != "")
-            {
-                Input = Input.Substring(0, Input.Length - 1);
-                if (Input == "") Input = "0";
-                BoxText.Text = Input;
-            }
-        }
 
+        //// /// FUNCTION /// //// {
         private void sin_Click(object sender, EventArgs e)// in radians!!!
         {
-                Rarg = Input;
+            Rarg = Input;
 
-                command = "sin";
+            command = "sin";
 
-                culc.Text = "sin( " + Rarg + " )";
+            culc.Text = "sin( " + Rarg + " )";
         }
 
         private void cos_Click(object sender, EventArgs e)// in radians!!!
@@ -306,16 +318,64 @@ namespace Сalculator
             culc.Text = "sqrt( " + Rarg + " )";
         }
 
+        private void squared_Click(object sender, EventArgs e)
+        {
+            Rarg = Input;
+
+            command = "squared";
+
+            culc.Text = "squared( " + Rarg + " )";
+        }
+
+        private void power_Click(object sender, EventArgs e)
+        {
+            Larg = Input;
+
+            command = "power";
+
+            culc.Text = Larg + " ^ ";
+            BoxText.Text = "0";
+            Input = "";
+        }
+        private void ln_Click(object sender, EventArgs e)
+        {
+            Rarg = Input;
+
+            command = "ln";
+
+            culc.Text = "ln( " + Rarg + " )";
+        }
+
+        private void Log_Click(object sender, EventArgs e)
+        {
+            Rarg = Input;
+
+            command = "lg";
+
+            culc.Text = "lg( " + Rarg + " )";
+        }
+
+        private void Fuct_Click(object sender, EventArgs e)
+        {
+            Rarg = Input;
+
+            command = "fuct";
+
+            culc.Text = "fuct( " + Rarg + " )";
+        }
+        //// /// FUNCTION /// //// {
+
+
         private void Form1_KeyDown(object sender, KeyEventArgs e)// keyboar reader
         {
 
             /// Enter(equaly)
             if (e.KeyCode == Keys.Enter)
                 this.enter_Click(new object(), new EventArgs());
-
+            // Backspace
             if(e.KeyCode == Keys.Back)
                 this.backspace_Click(new object(), new EventArgs());
-
+            // esc on clean (Cancel Batton)
 
             // num lock {
             if (e.KeyCode == Keys.D0 || e.KeyCode == Keys.NumPad0)
@@ -354,34 +414,7 @@ namespace Сalculator
             //  e.SuppressKeyPress = true;
         }
 
-
-        private void Form1_KeyUp(object sender, KeyEventArgs e)
-        {
-            //if (e.KeyCode == Keys.Enter)
-               // this.enter_Click(new object(), new EventArgs());
-
-        }
-
-        private void squared_Click(object sender, EventArgs e)
-        {
-            Rarg = Input;
-
-            command = "squared";
-
-            culc.Text = "squared( " + Rarg + " )";
-        }
-
-        private void power_Click(object sender, EventArgs e)
-        {
-            Larg = Input;
-
-            command = "power";
-
-            culc.Text = Larg + " ^ ";
-            BoxText.Text = "0";
-            Input = "";
-        }
-
+        // check boxs {
         private void degree_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -395,26 +428,10 @@ namespace Сalculator
             if (radians.Checked) { degree.Checked = false; radians.Checked = true; degrees = false; }
             if (!radians.Checked) { degree.Checked = true; radians.Checked = false; degrees = true; }
         }
+        // check boxs {
 
-        private void ln_Click(object sender, EventArgs e)
-        {
-            Rarg = Input;
+        
 
-            command = "ln";
-
-            culc.Text = "ln( " + Rarg + " )";
-        }
-
-        private void Log_Click(object sender, EventArgs e)
-        {
-            Rarg = Input;
-
-            command = "lg";
-
-            culc.Text = "lg( " + Rarg + " )";
-        }
-
-        /// Function
 
     }
 }
